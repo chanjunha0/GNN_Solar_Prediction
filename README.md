@@ -2,6 +2,7 @@
 
 This repository contains scripts and configurations for data processing, model training, prediction, and evaluation for a machine learning project involving training a model to predict facade solar radiation using Graph Neural Networks.
 
+![](https://github.com/chanjunha0/GNN_Solar_Prediction/blob/main/images/simulation.jpg)
 
 - Address the challenges posed by the Urban Heat Island (UHI) warming effect in Singapore.
 - The goal is to architect a new solution for climatic simulations that is more accurate and efficient.
