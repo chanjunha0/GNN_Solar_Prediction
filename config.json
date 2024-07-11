@@ -1,0 +1,87 @@
+{
+    "run_parameters": {
+        "data_processing": true,
+        "model_training": false,
+        "model_prediction": false,
+        "model_evaluation": false
+    },
+    "data_processing": {
+        "file_names": [
+            "building_alum_vertex",
+            "building_brick_vertex",
+            "building_conc_vertex",
+            "building_glass_vertex",
+            "building_wood_vertex",
+            "distance_alum",
+            "distance_brick",
+            "distance_conc",
+            "distance_glass",
+            "distance_wood",
+            "label",
+            "sensor",
+            "sensor_length",
+            "vertex_length_alum",
+            "vertex_length_brick",
+            "vertex_length_conc",
+            "vertex_length_glass",
+            "vertex_length_wood",
+            "normal",
+            "angle_degree"
+        ],
+        "append_list": [
+            "building_alum_vertex_df_append",
+            "building_brick_vertex_df_append",
+            "building_conc_vertex_df_append",
+            "building_glass_vertex_df_append",
+            "building_wood_vertex_df_append"
+        ],
+        "df_material_map": {
+            "building_conc_vertex_df": "exterior_concrete_wall",
+            "building_glass_vertex_df": "exterior_glass",
+            "building_wood_vertex_df": "exterior_wood_wall",
+            "building_brick_vertex_df": "exterior_white_brick",
+            "building_alum_vertex_df": "exterior_alum_cladding"
+        },
+        "df_vertex_names": [
+            "vertex_length_alum_df",
+            "vertex_length_brick_df",
+            "vertex_length_conc_df",
+            "vertex_length_glass_df",
+            "vertex_length_wood_df"
+        ],
+        "material_list": ["alum", "brick", "conc", "glass", "wood"],
+        "node_features": [
+            "sensor_x_",
+            "sensor_y_",
+            "sensor_z_",
+            "angle",
+            "normal_x",
+            "normal_y",
+            "normal_z",
+            "building_x",
+            "building_y",
+            "building_z",
+            "r_ref",
+            "g_ref",
+            "b_ref",
+            "spec",
+            "rough",
+            "type_flag"
+        ]
+    },
+    "training": {
+        "folder_path": "data",
+        "labels_info_path": "data/labels_info_training.csv",
+        "model_path": "data/model.pth",
+        "losses_file_path": "data/training_and_test_losses.csv",
+        "total_objects": 360,
+        "num_epochs": 50,
+        "learning_rate": 0.01,
+        "weight_decay": 0.01
+    },
+    "evaluation": {
+        "model_name": "model_360_50",
+        "start_run": 1,
+        "end_run": 9
+    }
+}
